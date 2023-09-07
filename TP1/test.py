@@ -7,3 +7,6 @@ def test_1 ():
 
 def test_2():
     assert f.puissance(2, 5) == 2**5
+
+def test_3 ():
+    assert f.puissance(2 ,3) > 0
