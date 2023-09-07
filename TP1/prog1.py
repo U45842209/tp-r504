@@ -6,7 +6,11 @@ import pytest
 print("Hello , World !")
 
 while True:
-    number = input("Donnez un nombre : ")
-    print(f"Voici le nombre au carré : {int(number)**2}")
-    print("Or use the function")
-    f.puissance(int(number), 2)
+    number = int(input("Donnez un nombre : "))
+    try:
+        print(f"Voici le nombre au carré : {number**2}")
+    except TypeError:
+        print("Only integers are allowed")
+        break
+    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+    print(f"La fonction retroune : {f.puissance(number, 2)}")

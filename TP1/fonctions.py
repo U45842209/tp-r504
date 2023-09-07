@@ -1,5 +1,5 @@
 def puissance(a, b):
-    if type(a) is not int and type(b) is not int:
+    try:
+        return a ** b
+    except TypeError:
         raise TypeError("Only integers are allowed")
-    else:
-        return a**b
