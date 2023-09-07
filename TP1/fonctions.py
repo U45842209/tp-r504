@@ -1,3 +1,5 @@
+import pytest
+
 def puissance(a, b):
     try:
         pow = 1
@@ -6,7 +8,7 @@ def puissance(a, b):
         if a > 0:
             return pow
         elif a == 0:
-            raise ValueError("This is not right")
+            pytest.raises(ValueError)
         elif a == 0 and b == 0:
             return 1
         else:
