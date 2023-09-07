@@ -78,4 +78,6 @@ fabric.properties
 
 .idea/
 .pytest_cache/
+TP1/.pytest_cache
 venv/
+__pycache__/
