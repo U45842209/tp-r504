@@ -6,9 +6,11 @@ def puissance(a, b):
         if a > 0:
             return pow
         elif a == 0:
-            return 0
+            raise ValueError("This is not right")
+        elif a == 0 and b == 0:
+            return 1
         else:
-            return f"-{pow}"
-        return pow
+            return int(f"-{pow}")
+
     except TypeError:
         raise TypeError("Only integers are allowed")
