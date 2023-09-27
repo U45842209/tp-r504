@@ -7,3 +7,11 @@ def test_1 ():
 
 def test_2():
     assert f.puissance(2, 5) == 2**5
+
+def test_puissance_exception():
+    with pytest.raises(ValueError):
+        f.puissance(2, "trois")
+
+def test_puissance_exception_2():
+    with pytest.raises(ZeroDivisionError):
+        f.puissance(2, 0)
