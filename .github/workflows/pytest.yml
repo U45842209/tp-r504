@@ -12,10 +12,8 @@ jobs:
         env:
           JOB_CONTEXT: ${{ github.repository }}
         run: echo "$JOB_CONTEXT"
-      - name: container
-        env:
-          JOB_CONTEXT: ${{ job.container }}
-        run: echo "$JOB_CONTEXT"
+      - name: Check OS Type
+        run: echo "Current OS Type: $(uname -s)"
       - uses: actions/checkout@v3
       - name: Set up Python for Demo
         uses: actions/setup-python@v4
