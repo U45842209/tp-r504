@@ -12,6 +12,10 @@ jobs:
         env:
           JOB_CONTEXT: ${{ github.repository }}
         run: echo "$JOB_CONTEXT"
+      - name: container
+        env:
+          JOB_CONTEXT: ${{ job.container }}
+        run: echo "$JOB_CONTEXT"
       - uses: actions/checkout@v3
       - name: Set up Python for Demo
         uses: actions/setup-python@v4
