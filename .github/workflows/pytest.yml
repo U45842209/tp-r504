@@ -3,7 +3,14 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python−version: ["3.8", "3.10"]
     steps:
+      - name: Set up Python for Demo
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
       - name: Nom branch
         env:
           JOB_CONTEXT: ${{ github.ref }}
