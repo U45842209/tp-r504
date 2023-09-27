@@ -4,6 +4,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Nom branch
+        env:
+          JOB_CONTEXT: ${{ github.ref }}
+        run: echo "$JOB_CONTEXT"
+      - name: Nom repo
+        env:
+          JOB_CONTEXT: ${{ github.repository }}
+        run: echo "$JOB_CONTEXT"
       - uses: actions/checkout@v3
       - name: Set up Python for Demo
         uses: actions/setup-python@v4
