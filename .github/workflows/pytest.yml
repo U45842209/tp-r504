@@ -13,7 +13,9 @@ jobs:
           JOB_CONTEXT: ${{ github.repository }}
         run: echo "$JOB_CONTEXT"
       - name: Check OS Type
-        run: echo "Current OS Type: $(uname -s)"
+        run: |
+          OS_TYPE=$(uname -s)
+          echo "Current OS Type: $OS_TYPE"
       - uses: actions/checkout@v3
       - name: Set up Python for Demo
         uses: actions/setup-python@v4
