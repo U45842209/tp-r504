@@ -1,6 +1,7 @@
 import pytest
 
 def puissance(a, b):
+    a, b = int(a), int(b)
     if b == int:
         if b < 0:
             raise ValueError("La valeur de l'exposant doit être un nombre entier positif.")
