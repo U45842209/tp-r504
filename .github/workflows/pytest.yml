@@ -13,17 +13,11 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Nom branch
-        env:
-          JOB_CONTEXT: ${{ github.ref }}
-        run: echo "$JOB_CONTEXT"
+        run: echo "${{ github.ref }}"
       - name: Nom repo
-        env:
-          JOB_CONTEXT: ${{ github.repository }}
-        run: echo "$JOB_CONTEXT"
+        run: echo "${{ github.repository }}"
       - name: Check OS Type
-        run: |
-          OS_TYPE=$(uname -s)
-          echo "Current OS Type: $OS_TYPE"
+        run: echo "Current OS Type $(uname -s)"
       - name: python version
         run: echo $(python --version)
       - name: Install pytest
