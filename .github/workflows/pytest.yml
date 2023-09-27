@@ -7,8 +7,9 @@ jobs:
       matrix:
         python−version: ["3.8", "3.10"]
     steps:
+      - uses: actions/checkout@v3
       - name: Set up Python for Demo
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
       - name: Nom branch
@@ -23,9 +24,8 @@ jobs:
         run: |
           OS_TYPE=$(uname -s)
           echo "Current OS Type: $OS_TYPE"
-      - uses: actions/checkout@v2
       - name: python version
-        run: python --version
+        run: echo $(python --version)
       - name: Install pytest
         run: pip3 install pytest
       - name: Run tests
