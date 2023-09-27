@@ -26,6 +26,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: Set up Python for Demo
         uses: actions/setup-python@v4
+      - name: python version
+        run: python3 version
       - name: Install pytest
         run: pip3 install pytest
       - name: Run tests
