@@ -85,6 +85,7 @@ Pouvez-vous voir votre fichier index.html ?
 
 Q2.7 - Revenir sur la branche tp2 et ajouter une image sur votre page web. Une fois la modification
 faite, tapez $ git diff. Qu’est-ce que cette commande affiche ?
+- la commande donne les différence avec la branche principal
 
 Q2.8 - Ajouter le fichier image au dépot et commiter les changements. Revenir sur la branche principale
 et fusionner les changements de la branche tp2 avec : $ git merge tp2.
