@@ -1,0 +1,105 @@
+Q1.1 Combien y a-t-il de contributeurs ? (d’après Github)
+- 9
+
+Q1.2 - Clonez le projet dans votre "home", en mesurant le temps
+- Temps : 1,8s
+- 304K
+
+Q1.3 - Lancer la commande git blame sur le fichier index.html
+En vous aidant de git help blame, expliquer en une phrase à quoi sert cette commande
+- ça liste les modification et par qui elles sont faites
+
+Q1.4 - Qui a commité la ligne 329
+- Jake Ginnivan : 3e5d1596
+
+Q1.5 - Notez le hash de ce commit
+- 3e5d1596e347e2ed2cf7cc30b34d222a19997050
+
+Q1.6 - Avec la commande git show sur ce commit, notez le message de l’auteur du commit
+- Author: Jake Ginnivan <jake.ginnivan@readify.net>
+- Date:   Tue Jun 17 21:47:47 2014 +0100
+-
+-     Adding tag command reference
+
+Q1.7 - Date de ce commit
+- Tue Jun 17 21:47:47 2014 +0100
+
+Q1.8 - En vous aidant de la commande git log <tag>, donner le hash du commit correspondant au
+tag de la version 1.0.0
+- b4ca8f29c1a9712cc4c4c0199758570b38bdf873
+
+Q1.9 - Avec git show, qui est l’auteur de ce commit ?
+- onlywei
+
+Q1.10 - Donner la commande bash qui va vous donner le nombre total de commits (et utilisant l’option
+--oneline de "git log")
+- git log | wc -l
+et le résultat
+- 596
+
+Q1.11 - La commande "git log" dispose de l’option "format" qui permet de personnaliser l’affichage du
+resultat. Un certain nombre de formats types sont prédéfinis, par exemple essayer :
+$ git log --format=reference
+qui est assez similaire à : $ git log --oneline
+Quelle est la différence ?
+- git log --format=reference donne le message et la date, git log --oneline donne seulement le message
+
+Q1.12 - On peut dans ces formats utiliser des "codes de formats" permettant d’avoir exactement l’infor-
+mation désirée, via la syntaxe $ git log --format="XXXX"
+en placant entre les guillemets des "placeholders".
+Chercher sur la page précédente la chaine à mettre pour avoir uniquement le nom de l’auteur du
+commit
+- git log | grep Author
+
+Q1.13 - Via cette dernière commande, et les outils sort, uniq et wc, donner la commande de type "one-
+liner" qui va afficher le nombre de contributeurs dans ce dépot. Cela correspond-il à ce qui est affiché
+par Github ?
+git shortlog -sne | wc -l
+
+Q2.1 - Ouvrez un shell dans votre "repo" tp-r504 et vérifier que tout est "propre". Quelle est la com-
+mande à utiliser ?
+- ls
+
+Q2.2 - Quel est le nom de la branche par défaut ?
+- main
+
+Q2.3 - Pour créer une branche, la commande est :
+$ git branch <nomdelabranche>
+Pour que son dossier de travail reflète la branche désirée, il faut basculer dessus avec :
+$ git checkout <nomdelabranche>
+Créer une branche nommée tp2 et basculer votre dossier dessus.
+
+Q2.4 - Créer un dossier web, dans lequel vous créerez un fichier html nommé index.html et contenant
+un squelette de page html
+(à prendre par exemple sur https://www.w3schools.com/html/html5_intro.asp)
+
+Q2.5 - Remontez d’un cran (cd ..) et visualisez l’état du dépot avec $ git status
+Le fichier web/index.html est-il versionné ?
+
+Q2.6 - Ajouter ce fichier au dépot, et committer. Puis revenir à la branche principale.
+Pouvez-vous voir votre fichier index.html ?
+
+Q2.7 - Revenir sur la branche tp2 et ajouter une image sur votre page web. Une fois la modification
+faite, tapez $ git diff. Qu’est-ce que cette commande affiche ?
+
+Q2.8 - Ajouter le fichier image au dépot et commiter les changements. Revenir sur la branche principale
+et fusionner les changements de la branche tp2 avec : $ git merge tp2.
+Vérifier que vous avez bien les modifs intégrées au code.
+
+Q3.1 - Demander à votre voisin son id et cloner son dépot tp-r504 dans votre home. Ajouter du texte
+dans le "readme".
+Avez-vous un moyen de transmettre vos modifications à son dépot ?
+
+Q3.2 - Effacer ce depot, et faites un "fork" de son dépot (via la page web de Github), puis cloner le fork
+ainsi réalisé dans votre "home". Vous voila doté d’un dépot qui est une copie du sien, mais dont vous
+êtes le propriétaire.
+
+Q3.3 - Si votre voisin ajoute des élements à son dépot, celle-ci sont-elles automatiquement propagées au
+votre ? Faites l’essai.
+Si non, voyez sur la page de votre fork la commande qui permet de le faire.
+
+Q3.4 - Ajouter une image sur la page web, dans le dépot "forké", puis propagez vos modifications.
+Allez ensuite sur la page Github de votre fork, puis cliquer sur "Contribute", puis sur "Open Pull
+request".
+Vous obtenez une page qui vous montre les différences entre votre fork et le dépot originel.
+Validez la demande, puis voyez avec votre voisin ce qui se passe de son coté.
