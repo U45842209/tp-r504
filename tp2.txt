@@ -68,16 +68,20 @@ $ git branch <nomdelabranche>
 Pour que son dossier de travail reflète la branche désirée, il faut basculer dessus avec :
 $ git checkout <nomdelabranche>
 Créer une branche nommée tp2 et basculer votre dossier dessus.
+- OK
 
 Q2.4 - Créer un dossier web, dans lequel vous créerez un fichier html nommé index.html et contenant
 un squelette de page html
 (à prendre par exemple sur https://www.w3schools.com/html/html5_intro.asp)
+- OK
 
 Q2.5 - Remontez d’un cran (cd ..) et visualisez l’état du dépot avec $ git status
 Le fichier web/index.html est-il versionné ?
+- Non
 
 Q2.6 - Ajouter ce fichier au dépot, et committer. Puis revenir à la branche principale.
 Pouvez-vous voir votre fichier index.html ?
+- Non
 
 Q2.7 - Revenir sur la branche tp2 et ajouter une image sur votre page web. Une fois la modification
 faite, tapez $ git diff. Qu’est-ce que cette commande affiche ?
