@@ -8,6 +8,4 @@ RUN apt install python3-pip python3 -y
 
 RUN pip3 install mysql-connector-python flask
 
-COPY app/sql_connector.py .
-
 CMD ["flask", "--app", "sql_connector", "run", "--host=0.0.0.0"]

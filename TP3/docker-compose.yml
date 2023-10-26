@@ -20,6 +20,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.python
+    volumes:
+      - ./app/sql_connector.py:/app/sql_connector.py
     ports:
       - '5000:5000'
     networks:
