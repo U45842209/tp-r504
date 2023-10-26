@@ -38,9 +38,8 @@ class MYSQL:
             cursor = self.cnx.cursor()
             cursor.execute("SHOW TABLES;")
             results = cursor.fetchall()
-            for row in results:
-                table_name = row[0]
-                print(table_name)
+            table_names = [row[0] for row in results]
+            return table_names
 
 db = MYSQL()
 
