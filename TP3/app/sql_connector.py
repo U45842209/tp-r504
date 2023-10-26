@@ -41,6 +41,7 @@ class MYSQL:
             table_names = [row[0] for row in results]
             return table_names
 
+
 db = MYSQL()
 
 app = Flask(__name__)
